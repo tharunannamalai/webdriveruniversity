@@ -1,0 +1,61 @@
+"""
+
+
+To seperate the inner folder from the main folder.
+
+
+
+"""
+
+Types of Locators 
+
+By.ID
+By.Name
+By.Class_name
+By.Css.Selector
+By.Xpath
+By.LinkText
+By.partialLinText
+By.Tag_name.
+
+
+FOR WEBDRIVER                      FOR ELEMENTS
+
+current_url                        clear
+find_element                       click
+find_elements                      find_element*
+find_element_by_*                  get_attribute 
+get                                get_property
+maximize_window                    is_displayed
+quit                               location
+refresh                            send_keys
+save_screenshot                    size
+title                              text
+
+
+PYTEST COMMANDS 
+
+python -m pytest --help  => list all keywords and option
+python -m pytest --verbose option or -v => pytest prints more data of the tests
+python -m pytest --quiet option or -q => pytest print just dots and F
+python -m pytest --exitfirst or -x option => As soon as the first failure happens, pytest stops.
+python -m pytest --maxfail=1 => use the --maxfail argument and set it to however many failures you want to stop after
+python -m pytest --junit-xml report.xml => This Option will generate a JUnit XML file for test results.
+
+
+python -m pytest tests/test_math.py::test_one_plus_one => Only mentioned testcase would be executed.
+python -m pytest -k one => This command will run all test functions that contain the substring "one".
+python -m pytest -k "one and not accum" => It supports boolean logic with "and", "or", and "not" keywords.
+python -m pytest -m nameofthemarker => run the tests using our markers
+
+Pytest Plugins 
+
+pytest-html ||  python -m pytest --html=report.html => To generate HTML reports from pytest, use the "pytest-html" plugin
+pytest-cov  ||  python -m pytest --cov=stuff --cov=test => When running tests with code coverage, pytest will print coverage output to the console with one line per module.
+                python -m pytest --cov=stuff --cov-report html => code coverage with html report
+
+pytest-xdist || python -m pytest -n 3 => -n 3 will run tests across three parallel threads.
+
+
+
+
